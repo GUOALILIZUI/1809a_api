@@ -4,6 +4,7 @@ namespace App\Http;
 
 use App\Http\Middleware\CenTent;
 use App\Http\Middleware\RequestTimes;
+use App\Http\Middleware\Token;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -63,7 +64,8 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'request'=>RequestTimes::class,
-        'centent'=>CenTent::class
+        'centent'=>CenTent::class,
+        'token'=>Token::class
 
     ];
 

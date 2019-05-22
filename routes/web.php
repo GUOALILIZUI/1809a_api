@@ -36,3 +36,22 @@ Route::get('cenTer','User\UserRegController@cenTer')->Middleware(['centent','req
 Route::resource('goods',GoodsController::class);
 
 
+
+//520  周考
+Route::get('comreg','Company\CompanyController@comReg');
+Route::post('regDo','Company\CompanyController@regDo');
+Route::get('companylist','Company\CompanyController@companyList');
+Route::post('listDo','Company\CompanyController@listDo');
+Route::get('token','Company\CompanyController@token')->middleware('token');
+Route::post('accessToken','Company\CompanyController@accessToken');
+Route::post('IP','Company\CompanyController@IP');
+Route::post('UA','Company\CompanyController@UA');
+
+
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

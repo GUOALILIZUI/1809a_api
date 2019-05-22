@@ -31,8 +31,5 @@ class RequestTimes
             Redis::incr($key);
             Redis::expire($key,60);
             return $next($request);
-
-
-
     }
 }
