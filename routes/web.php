@@ -55,3 +55,13 @@ Route::post('UA','Company\CompanyController@UA');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+
+//5.22
+Route::get('signIndex','Sign\SignController@index');
+Route::get('signLogin','Sign\SignController@signLogin');
+Route::post('log','Sign\SignController@log');
+
